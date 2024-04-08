@@ -103,5 +103,9 @@ class UserControllers extends Controller
          */ 
         Auth::logout();
         return redirect()->route('login');
+    // list danh sach va phan trang
+    public function index(){
+        $users = DB::table('users')->paginate(4);
+        return view('index', compact('users'));
     }
 }

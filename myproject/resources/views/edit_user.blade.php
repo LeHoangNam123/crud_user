@@ -34,7 +34,7 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            <a class="nav-link btn btn-primary" href="{{route('index')}}" tabindex="-1" aria-disabled="true">Back</a>
           </li>
         </ul>
           @if(!auth()->check())
