@@ -20,7 +20,6 @@
         <div class="form-group">
             <label for="exampleInputEmail1">Password</label>
             <input type="password" class="form-control" name="password"  placeholder="Enter password">
-            @if(session('error'))<span class="text-danger">{{ session('error') }}</span> @endif
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>

@@ -34,11 +34,11 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link btn btn-primary" href="" tabindex="-1" aria-disabled="true">Back</a>
+            <a class="nav-link btn btn-primary" href="{{route('index')}}" tabindex="-1" aria-disabled="true">Back</a>
           </li>
         </ul>
           @if(!auth()->check())
-          <a class="nav-link btn btn-primary" href="">Login</a>
+          <a class="nav-link btn btn-primary" href="#">Login</a>
           @else
           <a class="nav-link btn btn-primary" href="#">Logout</a>
           @endif
@@ -66,9 +66,9 @@
 
         <div class="form-group">
             <label for="exampleInputEmail1">Password</label>
-            <input type="password" class="form-control" name="password"  value="{{$user->password}}">
+            <input type="password" class="form-control" name="password"  value="">
         </div>
-        <img class="img-thumbnail" width="200px" src="{{ asset('images/users/' . $user->image) }}" alt="">
+        <img class="img-thumbnail" width="200px" src="" alt="">
         <div class="form-group">
             <label for="exampleInputEmail1">Avatar</label>
             <input type="file" name="image" class="form-control"  >

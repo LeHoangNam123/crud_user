@@ -10,7 +10,7 @@
     <div class="container">
       <!-- content -->
       <h2 class="text-center">Đăng ký người dùng</h2>
-    <form method="post" action="{{route('custom.register')}}" enctype="multipart/form-data"> 
+    <form method="post" action="" enctype="multipart/form-data"> 
         @csrf
         <div class="form-group">
             <label for="exampleInputEmail1">Username</label>
