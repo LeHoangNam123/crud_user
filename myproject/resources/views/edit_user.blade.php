@@ -51,24 +51,24 @@
         @csrf
         <div class="form-group">
             <label for="exampleInputEmail1">Username</label>
-            <input type="text" class="form-control" name="name"  value="{{$user->name}}">
+            <input type="text" class="form-control" name="name"  value="">
         </div>
 
         <div class="form-group">
             <label for="exampleInputEmail1">Email</label>
-            <input type="email" class="form-control" name="email"  value="{{$user->email}}">
+            <input type="email" class="form-control" name="email"  value="">
         </div>
 
         <div class="form-group">
             <label for="exampleInputEmail1">Phone</label>
-            <input type="text" class="form-control" name="phone"  value="{{$user->phone}}">
+            <input type="text" class="form-control" name="phone"  value="">
         </div>
 
         <div class="form-group">
             <label for="exampleInputEmail1">Password</label>
-            <input type="password" class="form-control" name="password"  value="{{$user->password}}">
+            <input type="password" class="form-control" name="password"  value="">
         </div>
-        <img class="img-thumbnail" width="200px" src="{{ asset('images/users/' . $user->image) }}" alt="">
+        <img class="img-thumbnail" width="200px" src="" alt="">
         <div class="form-group">
             <label for="exampleInputEmail1">Avatar</label>
             <input type="file" name="image" class="form-control"  >
