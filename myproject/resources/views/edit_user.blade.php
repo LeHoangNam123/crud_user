@@ -34,11 +34,11 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link btn btn-primary" href="" tabindex="-1" aria-disabled="true">Back</a>
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
           </li>
         </ul>
           @if(!auth()->check())
-          <a class="nav-link btn btn-primary" href="">Login</a>
+          <a class="nav-link btn btn-primary" href="{{route('login')}}">Login</a>
           @else
           <a class="nav-link btn btn-primary" href="#">Logout</a>
           @endif
@@ -51,24 +51,24 @@
         @csrf
         <div class="form-group">
             <label for="exampleInputEmail1">Username</label>
-            <input type="text" class="form-control" name="name"  value="">
+            <input type="text" class="form-control" name="name"  value="{{$user->name}}">
         </div>
 
         <div class="form-group">
             <label for="exampleInputEmail1">Email</label>
-            <input type="email" class="form-control" name="email"  value="">
+            <input type="email" class="form-control" name="email"  value="{{$user->email}}">
         </div>
 
         <div class="form-group">
             <label for="exampleInputEmail1">Phone</label>
-            <input type="text" class="form-control" name="phone"  value="">
+            <input type="text" class="form-control" name="phone"  value="{{$user->phone}}">
         </div>
 
         <div class="form-group">
             <label for="exampleInputEmail1">Password</label>
-            <input type="password" class="form-control" name="password"  value="">
+            <input type="password" class="form-control" name="password"  value="{{$user->password}}">
         </div>
-        <img class="img-thumbnail" width="200px" src="" alt="">
+        <img class="img-thumbnail" width="200px" src="{{ asset('images/users/' . $user->image) }}" alt="">
         <div class="form-group">
             <label for="exampleInputEmail1">Avatar</label>
             <input type="file" name="image" class="form-control"  >
