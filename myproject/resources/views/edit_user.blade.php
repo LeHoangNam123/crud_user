@@ -34,11 +34,11 @@
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link btn btn-primary" href="" tabindex="-1" aria-disabled="true">Back</a>
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
           </li>
         </ul>
           @if(!auth()->check())
-          <a class="nav-link btn btn-primary" href="">Login</a>
+          <a class="nav-link btn btn-primary" href="{{route('login')}}">Login</a>
           @else
           <a class="nav-link btn btn-primary" href="#">Logout</a>
           @endif
