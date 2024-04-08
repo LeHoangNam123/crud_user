@@ -10,7 +10,7 @@
     <div class="container">
       <!-- content -->
       <h2 class="text-center">Đăng Nhập</h2>
-    <form method="post" action=""> 
+    <form method="post" action="{{route('custom.login')}}"> 
         @csrf
         <div class="form-group">
             <label for="exampleInputEmail1">Email</label>
