@@ -7,23 +7,89 @@
     <title>Document</title>
 </head>
 <body>
+    <style>
+        body{
+            font-family: 'Montserrat', sans-serif;
+            font-size: 17px;
+        }
+        *{
+            box-sizing: border-box;
+
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+            min-height: 80vh;
+            align-items: center;
+        }
+        form{
+            border: 1px solid #dadce0;
+            border-radius: 5px;
+            padding: 40px;
+        }
+        h3{
+            text-align: center;
+            font-size: 24px;
+            font-weight: 500;
+        }
+        .form-group{
+            margin-bottom: 15px;
+            position: relative;
+        }
+        input{
+            height: 50px;
+            width: 300px;
+            outline: none;
+            border: 1px solid #dadce0;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: inherit;
+            color: #202124;
+        }
+        label{
+            position: absolute;
+            padding: 0px 5px;
+            left: 5px;
+            top:50%;
+            pointer-events: none;
+            transform: translateY(-50%);
+            background: #fff;
+            transition: all 0.3 ease-in-out
+        }
+        .form-group input:focus{
+            border: 2px solid #1a73e8;
+        }
+        .form-group input:focus + label{
+            top: 0px;
+            font-size: 13px;
+            font-weight: 500;
+            color: #1a73e8;
+        }
+        button{
+            width: 100%;
+        }
+
+    </style>
+    
     <div class="container">
       <!-- content -->
-      <h2 class="text-center">Đăng Nhập</h2>
+      
     <form method="post" action="{{route('custom.login')}}"> 
+        <h3 class="title">Đăng Nhập</h2>
         @csrf
         <div class="form-group">
-            <label for="exampleInputEmail1">Email</label>
-            <input type="email" class="form-control" name="email"  placeholder="Enter email">
+            <input type="email" name="email"  placeholder="Enter email">
         </div>
 
         <div class="form-group">
-            <label for="exampleInputEmail1">Password</label>
-            <input type="password" class="form-control" name="password"  placeholder="Enter password">
+            <input type="password"  name="password"  placeholder="Enter password">
+            @if(session('error'))<span class="text-danger">{{ session('error') }}</span> @endif
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Đăng Nhập</button>
+        <br>
+        Bạn chưa có tài khoản: <a href="{{route('register')}}" >Register</a>
     </form>
-    Bạn chưa có tài khoản: <a href="{{route('register')}}" >Register</a>
+    
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

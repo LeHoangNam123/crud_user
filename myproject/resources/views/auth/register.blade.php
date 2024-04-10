@@ -9,36 +9,39 @@
 <body>
     <div class="container">
       <!-- content -->
-      <h2 class="text-center">Đăng ký người dùng</h2>
-    <form method="post" action="" enctype="multipart/form-data"> 
-        @csrf
-        <div class="form-group">
-            <label for="exampleInputEmail1">Username</label>
-            <input type="text" class="form-control" name="name"  placeholder="Enter username">
-        </div>
+      <div class="row justify-content-around">
+        <form method="post" action="{{route('custom.register')}}" enctype="multipart/form-data" class="col-md-6 bg-light p-3 my-3">
+            <h1 class="text-center text-uppercase h3 py-3">Đăng ký người dùng</h1>
+            @csrf
+            <div class="form-group">
+                <label for="Username">Username</label>
+                <input id="username" type="text" class="form-control"  name="name"  placeholder="Enter username">
+            </div>
 
-        <div class="form-group">
-            <label for="exampleInputEmail1">Email</label>
-            <input type="email" class="form-control" name="email"  placeholder="Enter email">
-        </div>
+            <div class="form-group">
+                <label for="Email">Email</label>
+                <input id="useremail" type="email" class="form-control" name="email"  placeholder="Enter email">
+            </div>
 
-        <div class="form-group">
-            <label for="exampleInputEmail1">Phone</label>
-            <input type="text" class="form-control" name="phone"  placeholder="Enter phone">
-        </div>
+            <div class="form-group">
+                <label for="Phone">Phone</label>
+                <input id="userphone" type="text" class="form-control" name="phone"  placeholder="Enter phone">
+            </div>
 
-        <div class="form-group">
-            <label for="exampleInputEmail1">Password</label>
-            <input type="password" class="form-control" name="password"  placeholder="Enter password">
-        </div>
+            <div class="form-group">
+                <label for="Password">Password</label>
+                <input id="userpass" type="password" class="form-control"  name="password"  placeholder="Enter password">
+            </div>
 
-        <div class="form-group">
-            <label for="exampleInputEmail1">Avatar</label>
-            <input type="file" name="image" class="form-control"  >
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
-    Bạn đã có tài khoản: <a href="{{route('login')}}" >Register</a>
+            <div class="form-group">
+                <label for="Avatar">Avatar</label>
+                <input type="file" class="form-control" name="image">
+            </div>
+                <button type="submit" class="btn btn-primary btn-block" >Đăng Ký</button>
+                Bạn đã có tài khoản: <a href="{{route('login')}}" >Register</a>
+        </form>
+        </div> 
+    
     </div>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
