@@ -40,7 +40,7 @@
           @if(!auth()->check())
           <a class="nav-link btn btn-primary" href="{{route('login')}}">Login</a>
           @else
-          <a class="nav-link btn btn-primary" href="#">Logout</a>
+          <a class="nav-link btn btn-primary" href="{{route('logout')}}">Logout</a>
           @endif
       </div>
 
