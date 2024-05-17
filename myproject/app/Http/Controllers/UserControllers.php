@@ -39,6 +39,7 @@ class UserControllers extends Controller
             'phone' => 'required|string|max:20',
             'image' => 'nullable|image|max:2048',
             'email' => 'required|string|email|max:255',
+            'favorites' => 'required|string|favorites|max:2048',
             'password' => 'required|string|min:8',
         ]);
         //xử lý cập nhật
@@ -122,6 +123,7 @@ class UserControllers extends Controller
             'phone' => 'required|string|max:20',
             'image' => 'nullable|image|max:2048',
             'email' => 'required|string|email|unique:users|max:255',
+            'favorites' => 'required|string|favorites|max:2048',
             'password' => 'required|string|min:8',
         ]);
         $user = new User([
